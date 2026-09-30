@@ -2,172 +2,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tech Brief · Thứ Tư, 30/09/2026</title>
 <style>
- body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0;padding:12px;color:#1d1d1f;background:#fafafa;line-height:1.5}
- h1{font-size:20px;margin:4px 0} .head{color:#555;font-style:italic;margin-bottom:12px}
- h2{font-size:16px;margin:18px 0 6px}
- table{border-collapse:collapse;width:100%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
- td,th{border:1px solid #e3e3e3;padding:8px;vertical-align:top;font-size:14px;text-align:left}
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0 auto;max-width:860px;padding:14px;color:#1d1d1f;background:#f5f5f7;line-height:1.6;font-size:16px}
+ h1{font-size:22px;margin:4px 0} .head{color:#444;font-style:italic;margin-bottom:14px}
+ h2{font-size:18px;margin:22px 0 8px}
+ a{color:#1a73e8;text-decoration:none}
+ table{border-collapse:collapse;width:100%;background:#fff}
+ td,th{border:1px solid #e3e3e3;padding:8px;vertical-align:top;text-align:left}
  th{background:#f0f0f3;font-size:13px}
- .num{font-weight:700;text-align:center;width:22px}
- .meta{width:92px;font-size:12px;white-space:nowrap} .tier{font-weight:700}
- .title{font-weight:700;font-size:15px;margin-bottom:4px}
+ .overview{box-shadow:0 1px 3px rgba(0,0,0,.08)} .overview td{font-size:14px}
+ .overview td a{font-weight:600;color:#1d1d1f} .tldr{font-size:13px;color:#555;margin-top:2px}
+ .overview td:nth-child(5),.overview td:nth-child(6){white-space:nowrap;font-size:12px}
+ .card{background:#fff;border-radius:10px;padding:14px 16px;margin:0 0 16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+ .chips{font-size:12.5px;color:#555} .chips .n{font-weight:700;color:#1d1d1f}
+ .card h3{font-size:18px;line-height:1.35;margin:6px 0 8px}
+ .lead{font-size:16px;margin:0 0 10px;color:#222}
+ .facts{margin:6px 0 12px;font-size:14px} .facts th{width:34%;background:#fafafa;font-weight:600;font-size:13.5px}
+ .sec h4{font-size:15px;margin:12px 0 4px;color:#1d1d1f}
+ ul{margin:4px 0 8px 20px;padding:0} li{margin:4px 0}
+ .code{margin:8px 0} .cl{font-size:12.5px;color:#555;margin-bottom:2px}
+ pre{background:#1e1e1e;color:#e6e6e6;padding:10px;border-radius:6px;overflow-x:auto;font-size:12.5px;line-height:1.45;white-space:pre-wrap;word-break:break-word;margin:0}
  .tag{display:inline-block;font-size:11px;font-weight:600;background:#333;color:#fff;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:middle}
- ul{margin:4px 0 6px 18px;padding:0} li{margin:2px 0}
- .why{background:rgba(255,255,255,.7);border-left:3px solid #1a73e8;padding:4px 8px;margin:4px 0}
- .act{background:rgba(255,255,255,.7);border-left:3px solid #188038;padding:4px 8px;margin:4px 0}
- .src{font-size:12px;color:#555;margin-top:4px} a{color:#1a73e8}
- .overview td{font-size:13px} .foot{color:#888;font-size:12px;margin-top:12px}
- .overview td:nth-child(5),.overview td:nth-child(6){white-space:nowrap}
- body{max-width:900px;margin:0 auto}
+ .why{background:#e8f0fe;border-left:3px solid #1a73e8;padding:8px 10px;margin:10px 0 6px;border-radius:0 6px 6px 0}
+ .act{background:#e6f4ea;border-left:3px solid #188038;padding:8px 10px;margin:6px 0;border-radius:0 6px 6px 0}
+ .src{font-size:13px;color:#555;margin-top:8px}
+ .foot{color:#888;font-size:12.5px;margin-top:12px}
  @media (max-width:600px){
-  body{padding:8px} td,th{padding:6px}
+  body{padding:8px;font-size:15.5px} td,th{padding:6px}
   .overview th:nth-child(3),.overview td:nth-child(3){display:none}
-  .overview td{font-size:12.5px} .overview td:nth-child(5),.overview td:nth-child(6){font-size:10px;letter-spacing:-2px}
-  .meta{width:64px;font-size:11px;white-space:normal} .num{width:14px;padding:6px 3px}
-  .title{font-size:14.5px} td.body{font-size:14px}
+  .overview td{font-size:13px} .overview td:nth-child(5),.overview td:nth-child(6){font-size:10px;letter-spacing:-2px}
+  .card{padding:12px} .card h3{font-size:17px} .facts th{width:38%}
  }
-</style></head><body><div style="margin:0 0 10px;font-size:13px" data-build="build-1790743884"><a href="index.html">← Tất cả các số</a></div>
+</style></head><body><div style="margin:0 0 10px;font-size:13px" data-build="build-1790744566"><a href="index.html">← Tất cả các số</a></div>
 <h1>📰 Tech Brief · Thứ Tư, 30/09/2026</h1>
-<div class="head">OpenAI DevDay tung model rẻ (GPT-6.1 Sol) và agent chạy 24/7 (Dots); Shopify đẩy app sang expiring token và App Pricing; toolchain JS (Vite/Oxc) nhanh hơn rõ rệt.</div>
+<div class="head">OpenAI DevDay tung model rẻ (GPT-6.1 Sol), agent chạy 24/7 (Dots) và loạt công cụ cho dev; Shopify đẩy app sang expiring token và App Pricing; toolchain JS (Vite/Oxc/Vitest) nhanh hơn rõ rệt.</div>
 <h2>Tổng quan</h2>
-<table class="overview"><tr><th>#</th><th>Mức</th><th>Chủ đề</th><th>Tin</th><th>Hot</th><th>Ưu tiên</th></tr><tr><td>1</td><td>🔴</td><td>🛍 Shopify</td><td>Token exchange khi migrate sang expiring offline token giờ retry được trong 7 ngày</td><td>—</td><td>⭐⭐⭐</td></tr><tr><td>2</td><td>🔴</td><td>🛍 Shopify</td><td>Chuyển subscription Billing API sang Shopify App Pricing không cần merchant approve lại</td><td>—</td><td>⭐⭐⭐</td></tr><tr><td>3</td><td>🔴</td><td>🤖 AI</td><td>GPT-6.1 Sol: trí tuệ gần GPT-6 Astra với giá chỉ bằng 1/5</td><td>🔥🔥🔥</td><td>⭐⭐</td></tr><tr><td>4</td><td>🟡</td><td>🤖 AI</td><td>Livenerf: benchmark theo dõi Claude Opus 5.5 có bị “nerf” sau khi ra mắt không</td><td>🔥🔥</td><td>⭐⭐</td></tr><tr><td>5</td><td>🟡</td><td>🛠 Developer</td><td>Toolchain JS nhanh hơn: Oxc React Compiler 10x, Vitest 5, Vite+ 1.0</td><td>🔥</td><td>⭐⭐</td></tr><tr><td>6</td><td>🟡</td><td>🛍 Shopify</td><td>Sidekick gọi được app intent không cần tools — có thể làm deploy fail</td><td>—</td><td>⭐⭐</td></tr><tr><td>7</td><td>🟡</td><td>🤖 AI</td><td>OpenAI Dots: agent cá nhân chạy 24/7</td><td>🔥🔥</td><td>⭐</td></tr><tr><td>8</td><td>🟢</td><td>🤖 AI</td><td>Anthropic: GLM-5.3 và năng lực tấn công mạng lan rộng</td><td>🔥</td><td>⭐</td></tr><tr><td>9</td><td>🟢</td><td>🏗 Software engineering</td><td>Vì sao Shopify bỏ React Native sau 6 năm</td><td>—</td><td>⭐</td></tr></table>
+<table class="overview"><tr><th>#</th><th>Mức</th><th>Chủ đề</th><th>Tin (bấm để xem chi tiết)</th><th>Hot</th><th>Ưu tiên</th></tr><tr><td>1</td><td>🔴</td><td>🛍 Shopify</td><td><a href="#tin-1">Migrate sang expiring offline token: giờ retry được trong 7 ngày nếu lỡ mất response</a><div class="tldr">Mất response khi đổi token? Gọi lại với token cũ trong 7 ngày là lấy lại đúng cặp token.</div></td><td>—</td><td>⭐⭐⭐</td></tr><tr><td>2</td><td>🔴</td><td>🛍 Shopify</td><td><a href="#tin-2">Chuyển subscription Billing API sang Shopify App Pricing — merchant không phải approve lại</a><div class="tldr">Có tool 1-click trên Partner Dashboard và lệnh CLI để migrate hàng loạt; áp dụng từ kỳ billing kế tiếp.</div></td><td>—</td><td>⭐⭐⭐</td></tr><tr><td>3</td><td>🔴</td><td>🤖 AI</td><td><a href="#tin-3">OpenAI DevDay 2026: GPT-6.1 Sol rẻ bằng 1/5 Astra, gói Ultrafast và loạt công cụ cho dev</a><div class="tldr">Model gần mức Astra với giá 1/5; Ultrafast ~300 token/s; Codex Security, Agents API, Sign in with ChatGPT.</div></td><td>🔥🔥🔥</td><td>⭐⭐</td></tr><tr><td>4</td><td>🟡</td><td>🤖 AI</td><td><a href="#tin-4">Livenerf: đo bằng số liệu xem Claude Opus 5.5 có bị “nerf” sau khi ra mắt không</a><div class="tldr">Benchmark chạy mỗi ngày 30 ngày qua Claude Code, kết luận sớm nhất khoảng 24/10.</div></td><td>🔥🔥</td><td>⭐⭐</td></tr><tr><td>5</td><td>🟡</td><td>🛠 Developer</td><td><a href="#tin-5">Toolchain JS nhanh hơn hẳn: Oxc React Compiler 10x, Vitest 5, tsgolint, Oxfmt và Vite+ 1.0</a><div class="tldr">4 tháng sau khi VoidZero về Cloudflare: 80+ release; compile React nhanh 10x, test nhanh tới 50%, lint nhanh 12–18x.</div></td><td>🔥</td><td>⭐⭐</td></tr><tr><td>6</td><td>🟡</td><td>🛍 Shopify</td><td><a href="#tin-6">Sidekick giờ gọi được app intent không cần tools — thiếu extensions_summary là deploy FAIL</a><div class="tldr">Extension chỉ khai báo intent giờ hiện trong Sidekick; nhưng shopify.app.toml phải có extensions_summary.</div></td><td>—</td><td>⭐⭐</td></tr><tr><td>7</td><td>🟡</td><td>🤖 AI</td><td><a href="#tin-7">OpenAI Dots: agent cá nhân chạy 24/7, nhận việc qua Slack/Teams</a><div class="tldr">Chạy trên GPT-6 Astra, có máy cloud riêng, kết nối 4.000+ app; đang mở cho Pro/Business Premium/Enterprise.</div></td><td>🔥🔥</td><td>⭐</td></tr><tr><td>8</td><td>🟢</td><td>🤖 AI</td><td><a href="#tin-8">Anthropic: model mở GLM-5.3 tự viết exploit gần bằng Claude Mythos — mà gần như không có safeguard</a><div class="tldr">50/410 exploit end-to-end (Mythos 56/410); bypass safeguard 64–100%; một exploit Chrome chỉ tốn ~$20.</div></td><td>🔥</td><td>⭐</td></tr><tr><td>9</td><td>🟢</td><td>🏗 Software engineering</td><td><a href="#tin-9">Vì sao Shopify bỏ React Native sau 6 năm — và AI là lý do</a><div class="tldr">AI viết code native đủ tốt nên lợi thế &#x27;viết 1 lần&#x27; của RN không còn đáng giá; app Shop viết lại native trong 12 tuần.</div></td><td>—</td><td>⭐</td></tr></table>
 <h2>Chi tiết</h2>
-<table>
-<tr style="background:#fdecea">
-  <td class="num">1</td>
-  <td class="meta">
-    <div class="tier">🔴 Phải đọc</div>
-    <div>🛍 Shopify</div>
-    <div title="Độ hot">—</div>
-    <div title="Mức ưu tiên">⭐⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Token exchange khi migrate sang expiring offline token giờ retry được trong 7 ngày <span class="tag">Mới</span></div>
-    <ul><li>Áp dụng khi app migrate token offline cũ (không hết hạn) sang expiring offline access token mà không có user session.</li><li>Nếu lỡ mất response hoặc chưa kịp lưu: gọi lại đúng request đó với token cũ + client credentials trong 7 ngày → Shopify trả lại đúng cặp access/refresh token như lần đầu, gia hạn access token nếu cần (refresh token thì không).</li><li>Hết khả năng khôi phục khi: quá 7 ngày, app đã refresh cặp token đó, hoặc store đã được cấp token mới (auth code / ID-token exchange).</li><li>Token cũ vẫn bị vô hiệu cho GraphQL Admin API sau khi migrate. Retry trả về invalid_subject_token thì phải lấy token mới qua ID-token exchange hoặc authorization code grant.</li><li>Không bắt buộc sửa code, luồng hiện tại vẫn chạy.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> App public nào cũng sẽ phải migrate token offline cho hàng nghìn shop; retry giúp tránh bắt merchant mở lại app để cấp quyền.</div><div class="act"><b>✅ Nên làm:</b> Trong job migrate token: lưu access token + refresh token + expiry trong cùng 1 lần ghi, thêm retry trong 7 ngày, xử lý nhánh invalid_subject_token, xoá token cũ sau khi thành công.</div>
-    <div class="src">🔗 <a href="https://shopify.dev/changelog/more-resilient-token-exchanges-when-migrating-tokens-without-a-user-session">Shopify.dev changelog</a></div>
-  </td>
-</tr>
-<tr style="background:#fdecea">
-  <td class="num">2</td>
-  <td class="meta">
-    <div class="tier">🔴 Phải đọc</div>
-    <div>🛍 Shopify</div>
-    <div title="Độ hot">—</div>
-    <div title="Mức ưu tiên">⭐⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Chuyển subscription Billing API sang Shopify App Pricing không cần merchant approve lại <span class="tag">Mới</span></div>
-    <ul><li>Partner Dashboard có tool migrate: tạo App Pricing plan từ các manual plan hiện có, test trên development store, rồi chuyển các subscription đơn giản (không có usage charge) sang plan tương ứng chỉ bằng 1 click.</li><li>Case phức tạp (usage-based, điều chỉnh giá, private plan) dùng lệnh Shopify CLI: shopify app subscription-migrations — xem trạng thái từng store, lên lịch chuyển hàng loạt, huỷ lịch khi cần.</li><li>Subscription được chuyển vào đầu kỳ billing kế tiếp; merchant không phải approve charge lại.</li><li>App đang dùng App Pricing rồi thì không bị ảnh hưởng.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> App có nhiều plan kèm usage fee (tính theo order) nhiều khả năng rơi vào nhóm phải dùng CLI thay vì migrate 1-click.</div><div class="act"><b>✅ Nên làm:</b> Liệt kê các loại subscription app đang có (plan thường, usage-based, private) và thử migrate trên dev store trước khi mở rộng.</div>
-    <div class="src">🔗 <a href="https://shopify.dev/changelog/move-existing-subscriptions-to-shopify-app-pricing">Shopify.dev changelog</a></div>
-  </td>
-</tr>
-<tr style="background:#fdecea">
-  <td class="num">3</td>
-  <td class="meta">
-    <div class="tier">🔴 Phải đọc</div>
-    <div>🤖 AI</div>
-    <div title="Độ hot">🔥🔥🔥</div>
-    <div title="Mức ưu tiên">⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">GPT-6.1 Sol: trí tuệ gần GPT-6 Astra với giá chỉ bằng 1/5 <span class="tag">Mới</span></div>
-    <ul><li>Ra mắt tại OpenAI DevDay 29/09, chỉ 1 tuần sau GPT-6 Sol. OpenAI giới thiệu là “near-Astra level intelligence at a fifth of the price”, mạnh hơn ở professional work, computer use và agentic coding.</li><li>Cùng ngày có Ultrafast: gói tốc độ cao, tới ~300 token/giây (nhanh gấp 8 lần trong Codex, 6 lần trong API) với giá gấp 6 lần giá chuẩn. Hiện có cho Astra, Sol 6.1 sẽ có sau.</li><li>OpenAI cũng hoãn GPT-6.1 Astra vì chưa đạt chuẩn an toàn.</li><li>Trên Hacker News: 839 điểm, ~760 bình luận — tin hot nhất trong ngày.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Model rẻ hơn nhiều cho tác vụ agent/coding nhiều token — đáng so sánh với Claude đang dùng về chất lượng/chi phí.</div><div class="act"><b>✅ Nên làm:</b> Khi Sol 6.1 có trong API/Codex, benchmark trên 1–2 tác vụ thật của team (review MR, fix bug) để so chi phí.</div>
-    <div class="src">🔗 <a href="https://openai.com/index/introducing-gpt-6-1-sol/">OpenAI</a> · <a href="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/">Simon Willison live blog</a> · <a href="https://news.ycombinator.com/item?id=49896586">HN 839▲ 760💬</a></div>
-  </td>
-</tr>
-<tr style="background:#fff8e1">
-  <td class="num">4</td>
-  <td class="meta">
-    <div class="tier">🟡 Nên biết</div>
-    <div>🤖 AI</div>
-    <div title="Độ hot">🔥🔥</div>
-    <div title="Mức ưu tiên">⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Livenerf: benchmark theo dõi Claude Opus 5.5 có bị “nerf” sau khi ra mắt không </div>
-    <ul><li>Mục tiêu: trả lời bằng số liệu câu hỏi “model có tệ đi sau khi phát hành không” (lượng tử hoá, đổi model nhỏ hơn, giảm effort, đổi routing…).</li><li>Chạy mỗi ngày 1 lần trong 30 ngày qua Claude Code headless (claude -p), prompt/CLI cố định, dựa trên framework Inspect của UK AISI. 78 câu hỏi GPQA/MMLU-Pro/AIME được chọn vì Opus lúc đúng lúc sai.</li><li>Đo được thay đổi khoảng 7,5 điểm accuracy mỗi cửa sổ 10 ngày; hạ effort xuống low làm giảm 8,3 điểm. Kết luận sớm nhất khoảng 24/10.</li><li>Cùng ngày Claude có sự cố partial outage (171 điểm HN).</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Team đang dựa nhiều vào Claude/Opus để code — có dữ liệu khách quan khi thấy model “kém đi”.</div>
-    <div class="src">🔗 <a href="https://github.com/ninjahawk/livenerf">GitHub livenerf</a> · <a href="https://news.ycombinator.com/item?id=49901736">HN 361▲ 153💬</a></div>
-  </td>
-</tr>
-<tr style="background:#fff8e1">
-  <td class="num">5</td>
-  <td class="meta">
-    <div class="tier">🟡 Nên biết</div>
-    <div>🛠 Developer</div>
-    <div title="Độ hot">🔥</div>
-    <div title="Mức ưu tiên">⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Toolchain JS nhanh hơn: Oxc React Compiler 10x, Vitest 5, Vite+ 1.0 <span class="tag">Mới</span></div>
-    <ul><li>4 tháng sau khi VoidZero về Cloudflare: hơn 80 release, đóng hơn 1.200 issue; Vite, Vitest, Rolldown, Oxc vẫn open source và không khoá vendor.</li><li>Oxc React Compiler (viết lại bằng Rust) compile React nhanh gấp 10 lần bản Babel. Bật trong Vite bằng @vitejs/plugin-react@^6.1 + oxc-transform-react, rồi react({ compiler: true }).</li><li>Vitest 5 nhanh hơn Vitest 4 tới 50%; tsgolint ổn định, nhanh hơn ESLint tới 18 lần trên codebase lớn; Oxfmt nhanh hơn Prettier 7 lần.</li><li>Vite+ 1.0 gom cả toolchain với cấu hình mặc định hợp lý. Kèm Vinext 1.0: chạy app Next.js (App/Pages Router) trên Vite, deploy được lên Workers, Netlify, AWS Lambda.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Test/lint/build nhanh hơn rút ngắn vòng feedback cho cả người lẫn AI agent trên repo JS lớn.</div><div class="act"><b>✅ Nên làm:</b> Thử Vitest 5 hoặc tsgolint trên 1 package của repo để đo thời gian so với hiện tại.</div>
-    <div class="src">🔗 <a href="https://blog.cloudflare.com/voidzero-update/">Cloudflare – VoidZero</a> · <a href="https://blog.cloudflare.com/vinext-nextjs-on-vite/">Cloudflare – Vinext 1.0</a></div>
-  </td>
-</tr>
-<tr style="background:#fff8e1">
-  <td class="num">6</td>
-  <td class="meta">
-    <div class="tier">🟡 Nên biết</div>
-    <div>🛍 Shopify</div>
-    <div title="Độ hot">—</div>
-    <div title="Mức ưu tiên">⭐⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Sidekick gọi được app intent không cần tools — có thể làm deploy fail <span class="tag">Breaking</span></div>
-    <ul><li>Trước đây extension phải khai báo tools mới được Sidekick gợi ý. Giờ extension admin.app.intent.link / admin.app.intent.render chỉ khai báo intent cũng được Sidekick hiển thị ngay, áp dụng mọi store, không gắn API version.</li><li>Nếu app có extension chỉ có intent mà shopify.app.toml thiếu extensions_summary trong mục [sidekick], lần shopify app deploy tiếp theo sẽ FAIL validation.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Deploy của app có thể bị chặn bất ngờ nếu có extension intent-only.</div><div class="act"><b>✅ Nên làm:</b> Grep các shopify.extension.toml tìm [[extensions.targeting.intents]] không có tools; nếu có thì thêm extensions_summary vào shopify.app.toml rồi deploy thử lên dev store.</div>
-    <div class="src">🔗 <a href="https://shopify.dev/changelog/sidekick-can-now-invoke-app-intents-without-tools">Shopify.dev changelog</a></div>
-  </td>
-</tr>
-<tr style="background:#fff8e1">
-  <td class="num">7</td>
-  <td class="meta">
-    <div class="tier">🟡 Nên biết</div>
-    <div>🤖 AI</div>
-    <div title="Độ hot">🔥🔥</div>
-    <div title="Mức ưu tiên">⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">OpenAI Dots: agent cá nhân chạy 24/7 <span class="tag">Mới</span></div>
-    <ul><li>Chạy trên GPT-6 Astra, mỗi Dot có máy ảo cloud riêng, kết nối hơn 4.000 app, học từ phản hồi; nhắn được trong ChatGPT, Slack, Teams (SMS sắp có).</li><li>Demo: Dot tự dùng Codex trên laptop để build app và chạy trong iPhone Simulator. Kèm ChatGPT Space + Pages để người và agent cùng làm tài liệu.</li><li>Đang mở cho Pro, Business Premium; Enterprise cần admin bật. Simon Willison nhận xét giao diện rất giống Meta Muse.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Hướng đi “agent luôn chạy + nhận việc qua Slack” đang thành xu hướng chung cho team dev.</div>
-    <div class="src">🔗 <a href="https://openai.com/index/introducing-dots/">OpenAI</a> · <a href="https://news.ycombinator.com/item?id=49896604">HN 495▲ 369💬</a></div>
-  </td>
-</tr>
-<tr style="background:#e8f5e9">
-  <td class="num">8</td>
-  <td class="meta">
-    <div class="tier">🟢 Đọc thêm</div>
-    <div>🤖 AI</div>
-    <div title="Độ hot">🔥</div>
-    <div title="Mức ưu tiên">⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Anthropic: GLM-5.3 và năng lực tấn công mạng lan rộng <span class="tag">Đọc sâu</span></div>
-    <ul><li>GLM-5.3 (Zhipu/Z.ai, open-weight) tự viết exploit end-to-end ở mức gần Claude Mythos Preview: 50/410 lần thành công trên ExploitBench (V8), Mythos là 56/410.</li><li>Khác biệt: GLM-5.3 phát hành gần như không có safeguard — kỹ thuật đơn giản bypass được 64–100% trong thử nghiệm. NIST CAISI gọi đây là model open-weight mạnh nhất về cyber, chậm hơn frontier Mỹ ~4 tháng.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Công cụ tìm và khai thác lỗ hổng ngày càng rẻ → cần siết vá dependency và review bảo mật.</div>
-    <div class="src">🔗 <a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">Anthropic</a> · <a href="https://news.ycombinator.com/item?id=49897075">HN 202▲ 198💬</a></div>
-  </td>
-</tr>
-<tr style="background:#e8f5e9">
-  <td class="num">9</td>
-  <td class="meta">
-    <div class="tier">🟢 Đọc thêm</div>
-    <div>🏗 Software engineering</div>
-    <div title="Độ hot">—</div>
-    <div title="Mức ưu tiên">⭐</div>
-  </td>
-  <td class="body">
-    <div class="title">Vì sao Shopify bỏ React Native sau 6 năm <span class="tag">Đọc sâu</span></div>
-    <ul><li>2020 Shopify chuyển cả 6 app sang React Native vì build Android lâu và muốn iOS/Android đồng nhất; 5 năm sau vẫn hài lòng.</li><li>Giờ AI viết code native (và backend) đủ tốt, còn RN thêm một lớp abstraction → quay lại native. App Shop được viết lại native chỉ trong 12 tuần.</li><li>Lịch sử lặp lại: Airbnb từng lên RN năm 2016 rồi bỏ sau 2 năm vì hiệu năng. Kotlin Multiplatform có thể hưởng lợi từ AI.</li></ul>
-    <div class="why"><b>👉 Vì sao quan trọng:</b> Ví dụ thực tế cho việc AI thay đổi các quyết định kiến trúc/stack.</div>
-    <div class="src">🔗 <a href="https://newsletter.pragmaticengineer.com/p/shopify-native-mobile">The Pragmatic Engineer</a></div>
-  </td>
-</tr></table>
+
+<section class="card" id="tin-1" style="border-top:4px solid #d93025">
+  <div class="chips"><span class="n">#1</span> 🔴 Phải đọc · 🛍 Shopify
+   · <span title="Độ hot">—</span> · <span title="Ưu tiên">⭐⭐⭐</span></div>
+  <h3>Migrate sang expiring offline token: giờ retry được trong 7 ngày nếu lỡ mất response <span class="tag">Mới</span></h3>
+  <p class="lead">Shopify đang chuyển các app từ offline token vĩnh viễn (non-expiring) sang expiring offline access token (có access token + refresh token). Trước đây, nếu app gọi token exchange để migrate mà không lưu được response (timeout, crash, lỗi DB…), token cũ đã bị vô hiệu còn token mới thì mất — merchant phải mở lại app để cấp quyền. Thay đổi này vá đúng lỗ hổng đó.</p><table class="facts"><tr><th>Áp dụng cho</th><td>App migrate token offline cũ KHÔNG có user session (chạy nền/batch)</td></tr><tr><th>Cửa sổ khôi phục</th><td>7 ngày kể từ lần exchange đầu tiên</td></tr><tr><th>Kết quả khi retry</th><td>Trả lại ĐÚNG cặp access/refresh token như lần đầu</td></tr><tr><th>Có cần sửa code?</th><td>Không bắt buộc — luồng cũ vẫn chạy</td></tr><tr><th>Lỗi cần xử lý</th><td>invalid_subject_token</td></tr></table><div class="sec"><h4>Cơ chế retry</h4><ul><li>Gọi lại đúng request migrate với token non-expiring gốc + client credentials hợp lệ → Shopify trả lại cặp token đã cấp lần đầu.</li><li>Shopify sẽ gia hạn expiry của access token nếu cần, nhưng KHÔNG gia hạn refresh token.</li><li>Token non-expiring gốc vẫn bị vô hiệu với GraphQL Admin API sau khi migrate — chỉ dùng được làm &#x27;chìa khoá&#x27; để retry.</li></ul></div><div class="sec"><h4>Khi nào hết khả năng khôi phục</h4><ul><li>Đã quá 7 ngày kể từ lần exchange đầu cho token đó.</li><li>App đã refresh thành công cặp token được cấp.</li><li>Store đã được cấp token mới bằng cách khác (authorization code grant hoặc ID-token exchange) thay thế cặp cũ.</li></ul></div><div class="sec"><h4>Shopify khuyến nghị làm gì</h4><ul><li>Lưu access token, refresh token và các giá trị expiry trong CÙNG một lần ghi (tránh lưu nửa vời).</li><li>Xoá token non-expiring gốc sau khi migrate thành công để app không dùng lại.</li><li>Nếu retry trả về invalid_subject_token: lấy token mới qua ID-token exchange (khi merchant mở app) hoặc authorization code grant, rồi cập nhật credentials.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> App public có hàng nghìn shop sẽ migrate token bằng job nền; chỉ cần vài % request lỗi mạng là hàng chục shop mất quyền truy cập. Retry 7 ngày biến lỗi &#x27;mất vĩnh viễn&#x27; thành lỗi &#x27;thử lại được&#x27;.</div><div class="act"><b>✅ Nên làm:</b> Rà job migrate token: (1) ghi atomic cả cặp token + expiry, (2) nếu ghi thất bại thì đưa shop vào hàng đợi retry trong 7 ngày, (3) nhánh invalid_subject_token → đánh dấu shop cần re-auth, (4) xoá token cũ sau khi thành công.</div>
+  <div class="src">🔗 Nguồn: <a href="https://shopify.dev/changelog/more-resilient-token-exchanges-when-migrating-tokens-without-a-user-session">Shopify.dev changelog</a></div>
+</section>
+<section class="card" id="tin-2" style="border-top:4px solid #d93025">
+  <div class="chips"><span class="n">#2</span> 🔴 Phải đọc · 🛍 Shopify
+   · <span title="Độ hot">—</span> · <span title="Ưu tiên">⭐⭐⭐</span></div>
+  <h3>Chuyển subscription Billing API sang Shopify App Pricing — merchant không phải approve lại <span class="tag">Mới</span></h3>
+  <p class="lead">App đang tính tiền merchant bằng Billing API (tự tạo appSubscriptionCreate) giờ có thể chuyển các subscription hiện có sang Shopify App Pricing — hệ thống plan do Shopify quản lý — thay vì phải tạo plan mới từ đầu và bắt merchant approve lại.</p><table class="facts"><tr><th>Ai bị ảnh hưởng</th><td>App đang bill bằng Billing API và muốn chuyển sang App Pricing</td></tr><tr><th>Không ảnh hưởng</th><td>App đã dùng App Pricing</td></tr><tr><th>Thời điểm chuyển</th><td>Đầu kỳ billing kế tiếp của từng subscription</td></tr><tr><th>Merchant approve lại?</th><td>Không</td></tr><tr><th>Công cụ</th><td>Partner Dashboard (case đơn giản) · Shopify CLI (case phức tạp)</td></tr></table><div class="sec"><h4>Partner Dashboard — cho plan đơn giản</h4><ul><li>Draft App Pricing plan dựa trên các manual plan hiện có của app.</li><li>Test plan mới trên development store trước.</li><li>Chuyển subscription đơn giản (không có usage charge) sang plan App Pricing tương ứng chỉ bằng 1 click.</li></ul></div><div class="sec"><h4>Shopify CLI — cho usage-based, điều chỉnh giá, private plan</h4><ul><li>Dùng nhóm lệnh shopify app subscription-migrations.</li><li>Liệt kê store và trạng thái migrate của từng store.</li><li>Lên lịch chuyển hàng loạt (bulk), và huỷ các lượt migrate đã lên lịch (kể cả lượt tạo từ Partner Dashboard).</li></ul></div><div class="sec"><h4>Quy trình Shopify khuyên</h4><ul><li>Tạo App Pricing plan khớp với manual plan → test trên dev store.</li><li>Chuyển thử một nhóm nhỏ store, xác nhận subscription chuyển đúng lịch và tính tiền đúng.</li><li>Chỉ mở rộng ra toàn bộ store sau khi đã kiểm chứng.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> App có plan kèm usage fee (ví dụ tính theo số order) sẽ không dùng được migrate 1-click mà phải dùng CLI; cần hiểu sớm để lên kế hoạch, tránh tính sai tiền merchant.</div><div class="act"><b>✅ Nên làm:</b> Phân loại subscription hiện có (plan thường / usage-based / private / có giảm giá riêng) → nhóm đơn giản thử Partner Dashboard, nhóm usage-based thử CLI trên dev store.</div>
+  <div class="src">🔗 Nguồn: <a href="https://shopify.dev/changelog/move-existing-subscriptions-to-shopify-app-pricing">Shopify.dev changelog</a></div>
+</section>
+<section class="card" id="tin-3" style="border-top:4px solid #d93025">
+  <div class="chips"><span class="n">#3</span> 🔴 Phải đọc · 🤖 AI
+   · <span title="Độ hot">🔥🔥🔥</span> · <span title="Ưu tiên">⭐⭐</span></div>
+  <h3>OpenAI DevDay 2026: GPT-6.1 Sol rẻ bằng 1/5 Astra, gói Ultrafast và loạt công cụ cho dev <span class="tag">Mới</span></h3>
+  <p class="lead">Keynote DevDay (29/09, San Francisco) có hơn 20 công bố. Với dev, đáng chú ý nhất là model rẻ mới GPT-6.1 Sol, gói tốc độ cao Ultrafast, và bộ công cụ quanh Codex. Nội dung dưới đây tổng hợp từ live blog của Simon Willison (người ngồi trong khán phòng) vì trang openai.com chặn bot.</p><table class="facts"><tr><th>GPT-6.1 Sol</th><td>“Near-Astra level intelligence at a fifth of the price” — ra mắt ngay trong ngày</td></tr><tr><th>Ultrafast</th><td>Nhanh ~8x, tới ~300 token/s; giá gấp 6 lần chuẩn; có cho Astra 6, Sol 6.1 sắp có</td></tr><tr><th>Gói Pro 500</th><td>Có Ultrafast + 25x hạn mức của Plus; gói $200 mở bán lại</td></tr><tr><th>HN</th><td>839 điểm, ~760 bình luận — tin hot nhất ngày</td></tr></table><div class="sec"><h4>Model &amp; API</h4><ul><li>GPT-6.1 Sol ra chỉ 1 tuần sau GPT-6 Sol; OpenAI định vị là bản &#x27;Astra nhưng rẻ và nhanh&#x27; mà dev đòi hỏi.</li><li>Decisions API (preview): model Luna chọn từ một tập đáp án định sẵn, phản hồi &#x27;trong tích tắc&#x27; — hợp cho phân loại/định tuyến request.</li><li>Agents API có thêm Computer Use; OpenAI nói đã tối ưu harness Computer Use cho độ trễ giảm 2 lần.</li><li>OpenAI khoe API &#x27;hiệu năng và ổn định nhất&#x27; — Simon nhận xét như một cú đá xéo Claude vì Claude vừa bị outage sáng cùng ngày.</li></ul></div><div class="sec"><h4>Codex &amp; bảo mật</h4><ul><li>Codex giờ &#x27;fully in the cloud&#x27;, chạy cả khi đóng laptop; có Codex trên Linux và trên điện thoại.</li><li>Codex Security Cloud (GA): quét lỗ hổng theo lịch, tự loại trùng (nội bộ OpenAI 36% phát hiện bị trùng), dùng model Daybreak chuyên bảo mật.</li><li>CLI Codex Security là open source; hỗ trợ file SECURITY.md để team tự định nghĩa threat model. Lệnh patch có thể tự sinh bản vá và mở PR; nhờ bước verify-fix (một agent &#x27;phản biện&#x27; bản vá) tỉ lệ rollback chỉ 1%.</li><li>Trong đợt security sprint nội bộ, OpenAI sửa 53 lỗi critical ngay ngày đầu.</li></ul></div><div class="sec"><h4>Phân phối &amp; nền tảng</h4><ul><li>Sign in with ChatGPT: người dùng đăng nhập app của bạn bằng tài khoản ChatGPT và dùng luôn hạn mức họ đang trả tiền.</li><li>Plugin extensions: plugin là cả một ứng dụng (editor, dashboard) chạy native trong ChatGPT/Codex; Adobe, Figma đã demo.</li><li>ChatGPT Sites (đang host 8 triệu site) có SQLite database, scheduled tasks, và giờ nhúng được plugin để hiển thị dữ liệu riêng theo từng người xem.</li><li>OpenAI Marketplace ra mắt; cuối keynote OpenAI reset hạn mức sử dụng cho toàn bộ người dùng.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Sol 6.1 là lựa chọn rẻ cho agent/coding tác vụ dài; Codex Security (quét → dedupe → tự vá → verify) là mô hình đáng tham khảo cho quy trình review bảo mật.</div><div class="act"><b>✅ Nên làm:</b> Khi Sol 6.1 có trong API/Codex: chạy thử trên 1–2 tác vụ thật (review MR, fix bug) để so chất lượng và chi phí với model đang dùng.</div>
+  <div class="src">🔗 Nguồn: <a href="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/">Simon Willison – DevDay live blog</a> · <a href="https://openai.com/index/introducing-gpt-6-1-sol/">OpenAI</a> · <a href="https://news.ycombinator.com/item?id=49896586">HN 839▲ 760💬</a></div>
+</section>
+<section class="card" id="tin-4" style="border-top:4px solid #f9ab00">
+  <div class="chips"><span class="n">#4</span> 🟡 Nên biết · 🤖 AI
+   · <span title="Độ hot">🔥🔥</span> · <span title="Ưu tiên">⭐⭐</span></div>
+  <h3>Livenerf: đo bằng số liệu xem Claude Opus 5.5 có bị “nerf” sau khi ra mắt không </h3>
+  <p class="lead">Nhiều tháng nay dev phàn nàn Anthropic &#x27;nerf&#x27; model vài tuần sau khi ra mắt (lượng tử hoá, âm thầm đổi model nhỏ hơn, giảm effort, đổi routing) — nhưng không ai có baseline ngày đầu để chứng minh. Livenerf bắt đầu đo Opus 5.5 (ra mắt 22/09) từ ngày 24/09 để trả lời bằng thống kê thay vì cảm giác.</p><table class="facts"><tr><th>Đo cái gì</th><td>Opus 5.5 qua Claude Code (claude -p) trên gói Max — đúng thứ người dùng hay phàn nàn</td></tr><tr><th>Lịch</th><td>Mỗi ngày 1 lần × 30 ngày; ngày 1–10 là baseline</td></tr><tr><th>Bộ câu hỏi</th><td>78 câu GPQA/MMLU-Pro/AIME mà Opus lúc đúng lúc sai</td></tr><tr><th>Độ nhạy</th><td>Phát hiện thay đổi ~7,5 điểm accuracy mỗi cửa sổ 10 ngày</td></tr><tr><th>Tiến độ (29/09)</th><td>6/30 ngày, chưa bỏ ngày nào</td></tr></table><div class="sec"><h4>Cách làm cho kết quả đáng tin</h4><ul><li>Không thể làm model deterministic, nên cố định mọi thứ khác: prompt đóng băng, pin phiên bản Claude Code CLI, chấm điểm exact-match (không dùng LLM làm giám khảo vì giám khảo cũng drift).</li><li>Có nhóm đối chứng chạy Opus 5 song song: nếu cả hai cùng tụt thì là do harness/nền tảng, không phải Opus 5.5.</li><li>Pre-registration: quy tắc kết luận công bố trước trên git — chỉ gọi là &#x27;thay đổi&#x27; khi khoảng tin cậy 99% loại trừ 0 ở 2 cửa sổ 10 ngày liên tiếp, lệch ≥3 điểm, và nhóm đối chứng không đổi.</li></ul></div><div class="sec"><h4>Số liệu kiểm chứng ban đầu</h4><ul><li>Hạ effort xuống low: giảm 62% token output và −8,3 ± 4,5 điểm accuracy; effort medium: −26% token, −4,2 điểm.</li><li>Giới hạn: thay Opus 5.5 bằng Opus 5 KHÔNG phân biệt được ở mức 99% với lượng mẫu hiện tại — tức công cụ chưa bắt được việc đổi sang model cùng họ.</li><li>Tín hiệu sớm đáng theo dõi nhất là số token output mỗi mẫu: model &#x27;nghĩ ít đi&#x27; thường lộ ở đây trước khi accuracy giảm.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Nếu team dựa nhiều vào Claude để code, đây là nguồn dữ liệu khách quan khi cảm thấy model &#x27;dạo này dốt đi&#x27;. Cùng ngày Claude cũng có sự cố partial outage (171 điểm HN).</div>
+  <div class="src">🔗 Nguồn: <a href="https://github.com/ninjahawk/livenerf">GitHub – livenerf</a> · <a href="https://news.ycombinator.com/item?id=49901736">HN 361▲ 153💬</a></div>
+</section>
+<section class="card" id="tin-5" style="border-top:4px solid #f9ab00">
+  <div class="chips"><span class="n">#5</span> 🟡 Nên biết · 🛠 Developer
+   · <span title="Độ hot">🔥</span> · <span title="Ưu tiên">⭐⭐</span></div>
+  <h3>Toolchain JS nhanh hơn hẳn: Oxc React Compiler 10x, Vitest 5, tsgolint, Oxfmt và Vite+ 1.0 <span class="tag">Mới</span></h3>
+  <p class="lead">VoidZero (team của Evan You, đứng sau Vite, Vitest, Rolldown, Oxc) báo cáo 4 tháng sau khi về Cloudflare: hơn 80 release, đóng hơn 1.200 issue, cam kết các công cụ vẫn open source và không khoá vendor. Thông điệp chính: khi AI agent viết code nhanh hơn, tốc độ type-check/lint/build/test trở thành nút thắt.</p><table class="facts"><tr><th>Oxc React Compiler</th><td>Nhanh 10x bản Babel, ít RAM hơn</td></tr><tr><th>Vitest 5</th><td>Nhanh hơn Vitest 4 tới 50%</td></tr><tr><th>tsgolint (Oxlint)</th><td>Nhanh 12–18x so với ESLint + typescript-eslint; hỗ trợ 59/61 rule type-aware</td></tr><tr><th>Oxfmt</th><td>Nhanh ~7x Prettier, output tương thích Prettier</td></tr><tr><th>Vite+ 1.0</th><td>Gói Vite 8, Vitest 5, Rolldown, Oxlint, Oxfmt + task caching</td></tr></table><div class="sec"><h4>Vitest 5 có gì mới</h4><ul><li>Chia sẻ file đã transform giữa các project, cache module trên đĩa, giảm dữ liệu gửi giữa main process và worker.</li><li>vitest doctor: phân tích thời gian setup/import/transform/test rồi gợi ý cấu hình nhanh hơn.</li><li>Trace View: ghi lại thao tác trình duyệt, assertion, DOM snapshot để replay test fail.</li><li>vi.when cho mock có điều kiện; benchmark chạy như test thường; tự fail khi quên await assertion async; cờ --repeats để bắt test chập chờn.</li></ul></div><div class="sec"><h4>Lint &amp; format</h4><ul><li>Oxlint bật typeAware + typeCheck dùng chung một TypeScript program cho cả lint lẫn type-check, không phải phân tích project 2 lần.</li><li>Oxfmt viết lại formatter JSON, CSS, SCSS, Less, GraphQL, YAML bằng Rust; có lệnh migrate từ Prettier.</li></ul></div><div class="sec"><h4>Sắp tới</h4><ul><li>Bundled Dev (trước gọi là Full Bundle Mode): dùng bundler production ngay khi dev → dev server nhanh hơn cho app lớn; dashboard Cloudflare đã dùng nội bộ.</li><li>Parser Oxc có thể nhanh thêm tới 3x; thuật toán chunking mới cho Rolldown; bản self-host của Void (nền tảng deploy của Vite).</li><li>Cùng ngày Cloudflare ra Vinext 1.0: chạy app Next.js (App lẫn Pages Router) trên Vite, deploy được lên Workers, Netlify, AWS Lambda; di chuyển bằng npx vinext check &amp;&amp; npx vinext init.</li></ul></div><div class="code"><div class="cl">Bật Oxc React Compiler trong Vite</div><pre>pnpm add -D @vitejs/plugin-react@^6.1.0 oxc-transform-react
+
+// vite.config.js
+import react from &quot;@vitejs/plugin-react&quot;;
+export default defineConfig({ plugins: [react({ compiler: true })] });</pre></div><div class="code"><div class="cl">Bật lint type-aware trong Oxlint</div><pre>import { defineConfig } from &quot;oxlint&quot;;
+export default defineConfig({ options: { typeAware: true, typeCheck: true } });</pre></div><div class="code"><div class="cl">Chuyển từ Prettier sang Oxfmt</div><pre>pnpm add -D oxfmt
+pnpm oxfmt --migrate prettier
+pnpm oxfmt</pre></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Với repo JS lớn, test/lint chậm là thứ làm cả người lẫn AI agent chờ lâu nhất; đổi công cụ có thể cắt thời gian CI đáng kể mà gần như không đổi code.</div><div class="act"><b>✅ Nên làm:</b> Chọn 1 package trong repo, đo thời gian chạy ESLint vs Oxlint (typeAware) và test runner hiện tại vs Vitest 5 để có số liệu thật trước khi đề xuất đổi.</div>
+  <div class="src">🔗 Nguồn: <a href="https://blog.cloudflare.com/voidzero-update/">Cloudflare – VoidZero update</a> · <a href="https://blog.cloudflare.com/vinext-nextjs-on-vite/">Cloudflare – Vinext 1.0</a></div>
+</section>
+<section class="card" id="tin-6" style="border-top:4px solid #f9ab00">
+  <div class="chips"><span class="n">#6</span> 🟡 Nên biết · 🛍 Shopify
+   · <span title="Độ hot">—</span> · <span title="Ưu tiên">⭐⭐</span></div>
+  <h3>Sidekick giờ gọi được app intent không cần tools — thiếu extensions_summary là deploy FAIL <span class="tag">Breaking</span></h3>
+  <p class="lead">Sidekick (trợ lý AI trong Shopify admin) trước đây chỉ gợi ý app nào có extension khai báo tools. Giờ extension chỉ khai báo intent cũng đủ điều kiện — áp dụng ngay cho mọi app, mọi store, không phụ thuộc API version.</p><table class="facts"><tr><th>Target liên quan</th><td>admin.app.intent.link · admin.app.intent.render</td></tr><tr><th>Opt-in?</th><td>Không — áp dụng tự động, pin API version cũ cũng không tránh được</td></tr><tr><th>Rủi ro</th><td>shopify app deploy lỗi validation nếu thiếu extensions_summary</td></tr></table><div class="sec"><h4>Ai bị ảnh hưởng</h4><ul><li>App có ít nhất một extension khai báo [[extensions.targeting.intents]] nhưng KHÔNG có file tools → extension đó lập tức hiện với Sidekick.</li><li>Nếu shopify.app.toml chưa có extensions_summary trong mục [sidekick], lần deploy tiếp theo sẽ báo lỗi thiếu field.</li><li>App mà mọi extension Sidekick đều đã có tools thì không bị gì (vốn đã phải có extensions_summary).</li></ul></div><div class="sec"><h4>Cần làm trước lần deploy tới</h4><ul><li>Tìm trong các shopify.extension.toml block [[extensions.targeting.intents]] trên admin.app.intent.link/render mà không có tools đi kèm.</li><li>Nếu có, thêm extensions_summary vào shopify.app.toml (mô tả ngắn app làm được gì cho Sidekick).</li><li>Chạy thử shopify app deploy lên development store.</li></ul></div><div class="code"><div class="cl">Ví dụ khai báo trong shopify.app.toml</div><pre>[sidekick]
+extensions_summary = &quot;Search and analyze product reviews, create review request campaigns, and manage review display settings&quot;</pre></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Đây là thay đổi âm thầm có thể chặn pipeline deploy vào đúng lúc cần hotfix.</div><div class="act"><b>✅ Nên làm:</b> Grep repo: grep -rn &quot;extensions.targeting.intents&quot; extensions/ — rồi kiểm tra shopify.app.toml đã có extensions_summary chưa.</div>
+  <div class="src">🔗 Nguồn: <a href="https://shopify.dev/changelog/sidekick-can-now-invoke-app-intents-without-tools">Shopify.dev changelog</a></div>
+</section>
+<section class="card" id="tin-7" style="border-top:4px solid #f9ab00">
+  <div class="chips"><span class="n">#7</span> 🟡 Nên biết · 🤖 AI
+   · <span title="Độ hot">🔥🔥</span> · <span title="Ưu tiên">⭐</span></div>
+  <h3>OpenAI Dots: agent cá nhân chạy 24/7, nhận việc qua Slack/Teams <span class="tag">Mới</span></h3>
+  <p class="lead">Dots là câu trả lời của OpenAI cho các agent cá nhân &#x27;luôn bật&#x27; như Meta Muse. Mỗi người có một Dot riêng (tự đặt tên, avatar dạng chấm tròn) chạy liên tục, học từ phản hồi và làm việc thay bạn qua các app đã kết nối.</p><table class="facts"><tr><th>Model</th><td>GPT-6 Astra (Simon Willison: &#x27;model mặc định khá đắt&#x27;)</td></tr><tr><th>Kết nối</th><td>4.000+ app; nhắn qua ChatGPT, Slack, Teams — SMS sắp có</td></tr><tr><th>Đối tượng</th><td>Pro, Business Premium; Enterprise cần admin bật</td></tr><tr><th>HN</th><td>495 điểm, 369 bình luận</td></tr></table><div class="sec"><h4>Demo tại keynote</h4><ul><li>Dot &#x27;Dottie&#x27; dùng Codex trên laptop để build app và chạy trong iPhone Simulator; một ví dụ khác là migrate API.</li><li>Nhân viên OpenAI giao việc cho Dot ngay trong Slack — mỗi Dot có danh tính riêng trong workspace.</li><li>Demo live bị khựng (&#x27;Dottie is having a slow morning&#x27;) với một khoảng lặng khá ngượng.</li></ul></div><div class="sec"><h4>Đi kèm</h4><ul><li>ChatGPT Space: không gian chung cho team và các Dot, có menu &#x27;/&#x27; kiểu Notion; Pages là tài liệu người và agent cùng sửa.</li><li>Specialist dots (preview cho doanh nghiệp) cho pháp lý, tài chính…; có tích hợp quản trị qua Microsoft Agent 365.</li><li>Nhận xét của Simon: giao diện rất giống Meta Muse; link tạo Dot lúc đầu chỉ chạy trên desktop.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Mô hình &#x27;agent luôn chạy + nhận việc qua Slack&#x27; đang thành chuẩn chung; đáng theo dõi nếu team đã dùng bot hỗ trợ trong Slack.</div>
+  <div class="src">🔗 Nguồn: <a href="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/">Simon Willison – DevDay live blog</a> · <a href="https://openai.com/index/introducing-dots/">OpenAI</a> · <a href="https://news.ycombinator.com/item?id=49896604">HN 495▲ 369💬</a></div>
+</section>
+<section class="card" id="tin-8" style="border-top:4px solid #188038">
+  <div class="chips"><span class="n">#8</span> 🟢 Đọc thêm · 🤖 AI
+   · <span title="Độ hot">🔥</span> · <span title="Ưu tiên">⭐</span></div>
+  <h3>Anthropic: model mở GLM-5.3 tự viết exploit gần bằng Claude Mythos — mà gần như không có safeguard <span class="tag">Đọc sâu</span></h3>
+  <p class="lead">GLM-5.3 của Zhipu AI (Z.ai) là model open-weight đầu tiên đạt năng lực tự xây dựng exploit end-to-end gần với Claude Mythos Preview — model mà Anthropic từng chỉ phát hành hạn chế cho bên phòng thủ. Khác biệt: ai cũng tải được GLM-5.3 và gỡ safeguard dễ dàng.</p><table class="facts"><tr><th>ExploitBench (V8)</th><td>GLM-5.3: 50/410 exploit end-to-end · Mythos Preview: 56/410</td></tr><tr><th>Binary Exploitation (OSS-Fuzz)</th><td>GLM-5.3 chiếm control flow 4% · Mythos 6% · Opus 4.6 và GLM-5.2: 0%</td></tr><tr><th>NIST CAISI</th><td>&#x27;Model open-weight mạnh nhất về cyber&#x27;; chậm hơn frontier Mỹ ~4 tháng</td></tr><tr><th>Chi phí 1 exploit Chrome</th><td>~$20,40 (GLM-5.3-Flash, 8 giờ máy + 20 phút người)</td></tr></table><div class="sec"><h4>Thử nghiệm thực tế</h4><ul><li>Trong 1 ngày, với ít sự chú ý của người, GLM-5.3 tìm nhiều lỗ hổng chưa biết trong JavaScript engine của một trình duyệt phổ biến và nối thành exploit: một trang web đọc được file tuỳ ý trên máy người truy cập (đã báo cho maintainer).</li><li>GLM-5.3-Flash biến bản vá công khai của CVE-2026-11645 (Chrome) thành chuỗi exploit ổn định trên ARM64, vượt cả PAC hardening.</li></ul></div><div class="sec"><h4>Safeguard dễ bị vượt</h4><ul><li>Giả làm &#x27;red-team agent tự động&#x27;: 64% chịu làm. Prefill phần suy nghĩ của model: 92%. Bản &#x27;abliterated&#x27; (gỡ từ chối trong trọng số, tốn ~2.200 GPU-giờ ≈ $4.400): 100%.</li><li>Abliteration hạ tỉ lệ từ chối từ &gt;90% xuống còn 2–12% mà gần như không làm giảm năng lực; bản abliterated đã được công khai vài ngày sau khi model ra mắt.</li><li>Các kỹ thuật trên không làm được với Claude có safeguard (API không cho prefill phần thinking, trọng số không công khai).</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Chi phí tìm và khai thác lỗ hổng đang giảm mạnh → thời gian từ lúc lộ CVE đến lúc bị tấn công ngắn lại; vá dependency và review bảo mật cần nhanh hơn.</div>
+  <div class="src">🔗 Nguồn: <a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">Anthropic</a> · <a href="https://news.ycombinator.com/item?id=49897075">HN 202▲ 198💬</a></div>
+</section>
+<section class="card" id="tin-9" style="border-top:4px solid #188038">
+  <div class="chips"><span class="n">#9</span> 🟢 Đọc thêm · 🏗 Software engineering
+   · <span title="Độ hot">—</span> · <span title="Ưu tiên">⭐</span></div>
+  <h3>Vì sao Shopify bỏ React Native sau 6 năm — và AI là lý do <span class="tag">Đọc sâu</span></h3>
+  <p class="lead">Tháng 1/2025 Shopify còn viết bài &#x27;Five years of React Native&#x27; khen RN hết lời. Tháng này, Head of Mobile Mustafa Ali tuyên bố native mới là tương lai. Gergely Orosz (The Pragmatic Engineer) phân tích vì sao.</p><table class="facts"><tr><th>2020</th><td>Chọn RN vì build Android quá lâu, muốn iOS/Android đồng nhất</td></tr><tr><th>Kết quả RN</th><td>6 app chuyển sang RN; màn hình load &lt;500ms (P75), &gt;99,9% phiên không crash</td></tr><tr><th>2026</th><td>Quay lại native; app Shop viết lại native trong 12 tuần</td></tr></table><div class="sec"><h4>Vì sao từng chọn React Native</h4><ul><li>Viết 1 lần cho 2 nền tảng, dev web/mobile di chuyển qua lại dễ nhờ TypeScript, không phải đuổi theo feature parity giữa iOS và Android.</li><li>Hot reloading xoá bỏ việc chờ compile vài phút cho mỗi thay đổi nhỏ trên codebase native lớn.</li><li>Điểm trừ: debug RN chập chờn, vẫn cần native cho animation/tác vụ nền/widget, phụ thuộc nhiều thư viện bên thứ ba.</li></ul></div><div class="sec"><h4>Vì sao bỏ</h4><ul><li>Theo Mustafa Ali: model code đã giỏi lên nhiều, agent làm được phần lớn việc implement, dịch code giữa Swift/Kotlin, test và review → chi phí viết 2 lần không còn là yếu tố quyết định như năm 2020.</li><li>Lợi thế của native vẫn còn: gần năng lực nền tảng và tooling chính chủ, ít lớp framework/dependency xen giữa.</li><li>Lịch sử lặp lại: Airbnb lên RN năm 2016 rồi quay về native sau 2 năm (lý do: hiệu năng). Kotlin Multiplatform — chia sẻ logic, UI native — có thể hưởng lợi từ AI.</li></ul></div>
+  <div class="why"><b>👉 Vì sao quan trọng:</b> Ví dụ thực tế cho việc AI làm thay đổi phép tính chi phí của các quyết định kiến trúc/stack — đáng đọc trước khi chọn cross-platform cho dự án mới.</div>
+  <div class="src">🔗 Nguồn: <a href="https://newsletter.pragmaticengineer.com/p/shopify-native-mobile">The Pragmatic Engineer</a></div>
+</section>
 <div class="foot">🔴 Phải đọc · 🟡 Nên biết · 🟢 Đọc thêm — 🔥 độ hot · ⭐ mức liên quan tới công việc của bạn.
 </div>
 </body></html>
